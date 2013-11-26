@@ -1,0 +1,5 @@
+wget -nc https://go.googlecode.com/files/go1.1.2.linux-amd64.tar.gz
+rm -r /usr/local/go 2>&1 > /dev/null || echo go
+tar -xf go1.1.2.linux-amd64.tar.gz
+mv go /usr/local/go
+sed '/^PATH=/ s/"$$/:\/usr\/local\/go\/bin"/'  -i.bk /etc/environment

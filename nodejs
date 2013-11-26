@@ -1,0 +1,8 @@
+if ! which node > /dev/null
+then
+  wget -nc http://nodejs.org/dist/v0.10.19/node-v0.10.19-linux-x64.tar.gz
+  tar -xf node-v0.10.19-linux-x64.tar.gz
+  mv node-v0.10.19-linux-x64/bin/* /usr/local/bin
+  mv node-v0.10.19-linux-x64/lib/node_modules /usr/local/lib
+  rm -r node-v0.10.19-linux-x64
+fi
