@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt-get install python-software-properties
+apt-get install -y python-software-properties
 add-apt-repository ppa:keithw/mosh
 apt-get update
-apt-get install mosh
+apt-get install -y mosh
