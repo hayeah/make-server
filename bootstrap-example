@@ -1,0 +1,20 @@
+#!/bin/bash
+
+ROOT=${1:?need to specify ssh root login}
+
+# bootstrap a system with
+# 1. basic stuff
+# 2. mosh shell
+# 3. ruby via rvm
+ssh $ROOT <<-HERE
+sudo apt-get -y install git
+git clone "https://github.com/hayeah/make-server.git"
+cd make-server
+sudo bash common
+sudo bash mosh
+sudo bash rvm
+sudo bash ruby
+sudo bash password-less-sudo
+HERE
+
+
